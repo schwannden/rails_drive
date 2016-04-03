@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = RailsDrive::VERSION
   s.authors     = ["schwannden"]
   s.email       = ["schwannden@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of RailsDrive."
-  s.description = "TODO: Description of RailsDrive."
+  s.homepage    = "https://github.com/schwannden/rails_drive"
+  s.summary     = "Rails plugin for Google Drive"
+  s.description = "A Rails plugin for Google drive that enables Drive documents and folders to act like active record"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
@@ -19,5 +19,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.2.5"
 
+  s.add_runtime_dependency "google-api-client"
   s.add_development_dependency "sqlite3"
 end
