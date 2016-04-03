@@ -1,12 +1,13 @@
 require 'rails_drive/google'
 
 module RailsDrive
-  # Alias the module
-  Oauth2       = Google::Apis::Oauth2V2
-  Auth         = Google::Auth
 
   class Signin
+
     include RailsDrive::Config
+    # Alias the module
+    Oauth2 = Google::Apis::Oauth2V2
+    Auth   = Google::Auth
 
     def initialize(id_token_string)
       @id_token = id_token_verifier(id_token_string)

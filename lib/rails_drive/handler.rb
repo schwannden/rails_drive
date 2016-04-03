@@ -2,13 +2,14 @@ require 'fileutils'
 require 'rails_drive/google'
 
 module RailsDrive
-  # Alias the module
-  Oauth2       = Google::Apis::Oauth2V2
-  Auth         = Google::Auth
 
   class Handler
 
     include RailsDrive::Config
+    # Alias the module
+    Oauth2 = Google::Apis::Oauth2V2
+    Auth   = Google::Auth
+
     attr_reader :credentials, :auth_client
 
     def initialize(user_id = 'default')
